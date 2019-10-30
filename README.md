@@ -1,12 +1,16 @@
 This example demonstrates how to do bidirectional communication between the watch and phone.
 
-The code is written in **Swift 4**. If you are re-creating the code from home, you may find other functions to that are available in Swift 5.
+The code is written in **Swift 4**. 
+
+* If you are re-creating the code from home, you may find other functions to that are available in Swift 5.
 
 This code is tested to work on:
+
 *  XCode 9.2
 *  iPhone 8 Plus + Apple watch series 3, 42 mm
 *  iPhone deployment target 11.2
 *  watchOS deployment target 4.2
+
 
 How it works:
 -----
