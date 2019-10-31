@@ -16,6 +16,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // MARK: Outlets
     // ---------------------
     @IBOutlet var messageLabel: WKInterfaceLabel!
+   
+    // Imageview for the pokemon
+    @IBOutlet var pokemonImageView: WKInterfaceImage!
+    // Label for Pokemon name (Albert is hungry)
+    @IBOutlet var nameLabel: WKInterfaceLabel!
+    // Label for other messages (HP:100, Hunger:0)
+    @IBOutlet var outputLabel: WKInterfaceLabel!
+    
     
     
     // MARK: Delegate functions
@@ -91,6 +99,24 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             print("Phone is not reachable")
             self.messageLabel.setText("Cannot reach phone")
         }
+    }
+    
+    
+    // MARK: Functions for Pokemon Parenting
+    @IBAction func nameButtonPressed() {
+        print("name button pressed")
+    }
+
+    @IBAction func startButtonPressed() {
+        print("Start button pressed")
+    }
+    
+    @IBAction func feedButtonPressed() {
+        print("Feed button pressed")
+    }
+    
+    @IBAction func hibernateButtonPressed() {
+        print("Hibernate button pressed")
     }
     
 }
