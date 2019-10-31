@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Helvetica.ttc">
-            <string>Helvetica-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -31,6 +26,7 @@
                                 <label height="20" alignment="left" text="Label" numberOfLines="2" id="PMJ-75-bao">
                                     <fontDescription key="font" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                 </label>
+                                <label width="42" height="26" alignment="left" text="Label" id="3Gr-wB-SBU"/>
                             </items>
                         </group>
                         <imageView width="47" height="47" alignment="center" image="pokeball" id="RxI-YZ-AgM"/>
@@ -39,11 +35,12 @@
                         </label>
                         <group width="1" alignment="left" id="zVJ-eg-oyl">
                             <items>
-                                <button alignment="center" title="N" id="sSF-lA-oJl">
+                                <button width="22" alignment="center" title="N" id="sSF-lA-oJl">
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="13"/>
                                     <connections>
                                         <action selector="nameButtonPressed" destination="AgC-eL-Hgc" id="eHT-Ns-0Sz"/>
+                                        <segue destination="TKJ-vR-82D" kind="push" id="hpQ-Q9-BEt"/>
                                     </connections>
                                 </button>
                                 <button alignment="center" title="S" id="kff-c9-AJG">
@@ -74,6 +71,7 @@
                         </label>
                     </items>
                     <connections>
+                        <outlet property="message2Label" destination="3Gr-wB-SBU" id="7Ay-iO-wVf"/>
                         <outlet property="messageLabel" destination="PMJ-75-bao" id="X1T-aZ-hg2"/>
                         <outlet property="nameLabel" destination="QdJ-Fj-LrR" id="HAA-SN-3Fj"/>
                         <outlet property="outputLabel" destination="Pt1-1p-5yN" id="Ojk-s6-fYf"/>
@@ -81,7 +79,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="555" y="31.5"/>
+            <point key="canvasLocation" x="253" y="25"/>
         </scene>
         <!--Screen2 Sample-->
         <scene sceneID="rSw-iR-0SS">
@@ -101,6 +99,7 @@
                             <color key="backgroundColor" red="1" green="0.9385274106" blue="0.23414020229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="startButtonPressed" destination="TKJ-vR-82D" id="yIB-Vl-PdC"/>
+                                <segue destination="ak2-Ih-nfb" kind="push" id="XfS-LB-U25"/>
                             </connections>
                         </button>
                     </items>
@@ -110,7 +109,18 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="562" y="382"/>
+            <point key="canvasLocation" x="579" y="36"/>
+        </scene>
+        <!--Startsample-->
+        <scene sceneID="ipz-TW-3CZ">
+            <objects>
+                <controller id="ak2-Ih-nfb" customClass="startsample" customModule="CommunicationTest_WatchKit_Extension">
+                    <items>
+                        <label width="100" height="33" alignment="left" text="Health" id="aVL-uK-SSu"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="831" y="36"/>
         </scene>
     </scenes>
 </document>

@@ -17,6 +17,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // ---------------------
     @IBOutlet var messageLabel: WKInterfaceLabel!
    
+    @IBOutlet var message2Label: WKInterfaceLabel!
     // Imageview for the pokemon
     @IBOutlet var pokemonImageView: WKInterfaceImage!
     // Label for Pokemon name (Albert is hungry)
@@ -38,8 +39,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("WATCH: Got message from Phone")
         // Message from phone comes in this format: ["course":"MADT"]
-        let messageBody = message["course"] as! String
+        //let messageBody = message["course"] as! String
+        //messageLabel.setText(messageBody)/
+        let messageBody = message["POKEMAN"] as! String
         messageLabel.setText(messageBody)
+       //let messageBody1 = message["POKEMAN1"] as! String
+      // message2Label.setText(messageBody1)
     }
     
 
@@ -83,7 +88,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             print("Attempting to send message to phone")
             self.messageLabel.setText("Sending msg to watch")
             WCSession.default.sendMessage(
-                ["name" : "Pritesh"],
+                ["Select" : "Pokemon"],
                 replyHandler: {
                     (_ replyMessage: [String: Any]) in
                     // @TODO: Put some stuff in here to handle any responses from the PHONE
@@ -103,7 +108,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     
     // MARK: Functions for Pokemon Parenting
-    @IBAction func nameButtonPressed() {
+    @IBAction func nameButtonPressed()
+    {
+        
         print("name button pressed")
     }
 

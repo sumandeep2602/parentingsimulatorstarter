@@ -77,7 +77,7 @@ class ViewController: UIViewController, WCSessionDelegate  {
 
     // MARK: Actions
     // -------------------
-    @IBAction func sendMessageButtonPressed(_ sender: Any) {
+    /*@IBAction func sendMessageButtonPressed(_ sender: Any) {
         
         // 2. When person presses button, send message to watch
         outputLabel.insertText("\nTrying to send message to watch")
@@ -96,14 +96,46 @@ class ViewController: UIViewController, WCSessionDelegate  {
             outputLabel.insertText("\nCannot reach watch")
         }
     }
-    
+    */
     
     // MARK: Choose a Pokemon actions
     
-    @IBAction func pokemonButtonPressed(_ sender: Any) {
+    @IBAction func pokemonButtonPressed(_ sender: Any)
+    {
+        if (WCSession.default.isReachable) {
+            let message = ["POKEMAN": "Pikachu selected"]
+            WCSession.default.sendMessage(message, replyHandler: nil)
+            // output a debug message to the UI
+            outputLabel.insertText("\nMessage sent to watch")
+            // output a debug message to the console
+            print("Message sent to watch")
+        }
+        else {
+            print("PHONE: Cannot reach watch")
+            outputLabel.insertText("\nCannot reach watch")
+        }
+        
+            
+        
         print("You pressed the pokemon button")
+    
     }
-    @IBAction func caterpieButtonPressed(_ sender: Any) {
+    @IBAction func caterpieButtonPressed(_ sender: Any)
+    {
+        if (WCSession.default.isReachable) {
+            let message = ["POKEMAN1": "caterpie selected"]
+            WCSession.default.sendMessage(message, replyHandler: nil)
+            // output a debug message to the UI
+            outputLabel.insertText("\nMessage sent to watch")
+            // output a debug message to the console
+            print("Message sent to watch")
+        }
+        else {
+            print("PHONE: Cannot reach watch")
+            outputLabel.insertText("\nCannot reach watch")
+        }
+        
+        
         print("You pressed the caterpie button")
     }
     

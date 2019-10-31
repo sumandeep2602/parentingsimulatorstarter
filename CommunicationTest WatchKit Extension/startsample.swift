@@ -1,20 +1,23 @@
 //
-//  Screen2Sample.swift
+//  startsample.swift
 //  CommunicationTest WatchKit Extension
 //
-//  Created by Parrot on 2019-10-31.
+//  Created by MacStudent on 2019-10-31.
 //  Copyright © 2019 Parrot. All rights reserved.
 //
 
-import Foundation
+import WatchKit
 import WatchKit
 import WatchConnectivity
 
-class Screen2Sample: WKInterfaceController, WCSessionDelegate {
+
+
+
+class startsample  : WKInterfaceController, WCSessionDelegate {
     
     // MARK: Outlets
     // ---------------------
-
+    
     // 1. Outlet for the image view
     @IBOutlet var pokemonImageView: WKInterfaceImage!
     
@@ -79,9 +82,10 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
                 self.nameLabel.setText(userResponse)
             }
         }
-
+        
         print("select name button pressed")
     }
     
-
+    
 }
+
