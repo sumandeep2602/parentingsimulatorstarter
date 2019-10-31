@@ -96,5 +96,17 @@ class ViewController: UIViewController, WCSessionDelegate  {
             outputLabel.insertText("\nCannot reach watch")
         }
     }
+    
+    
+    // MARK: Choose a Pokemon actions
+    
+    @IBAction func pokemonButtonPressed(_ sender: Any) {
+        print("You pressed the pokemon button")
+    }
+    @IBAction func caterpieButtonPressed(_ sender: Any) {
+        print("You pressed the caterpie button")
+    }
+    
+    
 }
 
