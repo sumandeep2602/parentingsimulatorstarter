@@ -1,5 +1,5 @@
 //
-//  startsample.swift
+//  feed.swift
 //  CommunicationTest WatchKit Extension
 //
 //  Created by MacStudent on 2019-10-31.
@@ -13,7 +13,7 @@ import WatchConnectivity
 
 
 
-class startsample  : WKInterfaceController, WCSessionDelegate {
+class feed : WKInterfaceController, WCSessionDelegate {
     
     // MARK: Outlets
     // ---------------------
@@ -93,4 +93,3 @@ class startsample  : WKInterfaceController, WCSessionDelegate {
     
     
 }
-

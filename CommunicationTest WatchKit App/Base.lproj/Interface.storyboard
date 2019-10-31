@@ -55,6 +55,7 @@
                                     <fontDescription key="font" type="system" pointSize="13"/>
                                     <connections>
                                         <action selector="feedButtonPressed" destination="AgC-eL-Hgc" id="7p2-0N-wzS"/>
+                                        <segue destination="nFY-vT-L86" kind="push" id="FID-Gy-6jQ"/>
                                     </connections>
                                 </button>
                                 <button alignment="center" title="H" id="yEc-zK-6HE">
@@ -62,6 +63,7 @@
                                     <fontDescription key="font" type="system" pointSize="13"/>
                                     <connections>
                                         <action selector="hibernateButtonPressed" destination="AgC-eL-Hgc" id="lo9-VG-AtJ"/>
+                                        <segue destination="8Or-GM-i6S" kind="push" id="vdW-ve-Z5L"/>
                                     </connections>
                                 </button>
                             </items>
@@ -79,7 +81,32 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="253" y="25"/>
+            <point key="canvasLocation" x="332" y="48"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="OhL-VQ-Opw">
+            <objects>
+                <controller id="nFY-vT-L86" customClass="feed" customModule="CommunicationTest_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="I am so hungry" id="y3j-RP-Tx3"/>
+                        <button width="1" alignment="left" title="Feed" id="w5x-eL-f1P"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="hibernate" id="NzA-2E-Zq0"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="155" y="391"/>
+        </scene>
+        <!--Hibernate-->
+        <scene sceneID="cqz-L9-r6c">
+            <objects>
+                <controller id="8Or-GM-i6S" customClass="hibernate" customModule="CommunicationTest_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Pikachu is hibernating" id="Hlb-2w-dEh"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="WAKE UP " id="x0H-cr-sdT"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="409" y="445"/>
         </scene>
         <!--Screen2 Sample-->
         <scene sceneID="rSw-iR-0SS">
@@ -116,11 +143,15 @@
             <objects>
                 <controller id="ak2-Ih-nfb" customClass="startsample" customModule="CommunicationTest_WatchKit_Extension">
                     <items>
-                        <label width="100" height="33" alignment="left" text="Health" id="aVL-uK-SSu"/>
+                        <imageView height="0.29999999999999999" heightAdjustment="1" alignment="left" image="health" id="61w-VJ-MnS"/>
+                        <label width="110" height="33" alignment="left" text="Score" id="8Za-KT-GWb"/>
                     </items>
+                    <connections>
+                        <outlet property="ScoreLbl" destination="8Za-KT-GWb" id="0sz-Na-6oi"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="831" y="36"/>
+            <point key="canvasLocation" x="770" y="369"/>
         </scene>
     </scenes>
 </document>

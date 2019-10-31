@@ -1,10 +1,12 @@
 //
-//  startsample.swift
+//  hibernate.swift
 //  CommunicationTest WatchKit Extension
 //
 //  Created by MacStudent on 2019-10-31.
 //  Copyright © 2019 Parrot. All rights reserved.
 //
+
+import WatchKit
 
 import WatchKit
 import WatchKit
@@ -13,7 +15,7 @@ import WatchConnectivity
 
 
 
-class startsample  : WKInterfaceController, WCSessionDelegate {
+class  hibernate : WKInterfaceController, WCSessionDelegate {
     
     // MARK: Outlets
     // ---------------------
@@ -93,4 +95,3 @@ class startsample  : WKInterfaceController, WCSessionDelegate {
     
     
 }
-
